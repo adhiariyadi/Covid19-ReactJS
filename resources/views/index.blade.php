@@ -41,6 +41,14 @@
     .box-data {
       height: 85px;
     }
+    #val-indonesia {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 20px;
+    }
     #prov-indo {
       visibility: hidden;
     }
@@ -130,7 +138,7 @@
                     <div class="d-flex box-data">
                       <div class="text-white">
                         <h4 class="mb-2 number-font text-uppercase" id="name-indonesia"></h4>
-                        <p class="text-white mb-0" id="val-indonesia" style="font-family: sans-serif; font-size: 11px; font-weight: 400;"></p>
+                        <p class="text-white" id="val-indonesia"></p>
                       </div>
                       <div class="ml-auto"><img src="{{ asset('img/indonesia-PZq.png') }}" width="50" height="50" alt="Positif"> </div>
                     </div>
@@ -267,7 +275,7 @@
       <footer class="main-footer">
         <div class="container">
           <div class="footer-left">
-            <strong>Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://github.com/Didotz" target="_blank">Didotz</a> & API By <a href="https://kawalcorona.com/">Kawal Corona</a></strong>
+            <strong>Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://github.com/adhiariyadi" target="_blank">Adhi Ariyadi</a> & API By <a href="https://kawalcorona.com/">Kawal Corona</a></strong>
           </div>
         </div>
       </footer>

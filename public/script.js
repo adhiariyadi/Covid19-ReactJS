@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //? Memanggil function
     all();
     pasien();
@@ -12,7 +12,7 @@ $(document).ready(function() {
     time();
 
     //? Memubuat function agar berjalan setiap detik
-    setInterval(function() {
+    setInterval(function () {
         all();
         provinsi();
         indonesia();
@@ -29,10 +29,10 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var nomor = 1;
                 var html = "";
-                $.each(data, function(index, val) {
+                $.each(data, function (index, val) {
                     html += "<tr>";
                     html += "<td>" + nomor++;
                     +"</td>";
@@ -52,7 +52,7 @@ $(document).ready(function() {
                 });
                 $("#all-data").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -61,11 +61,11 @@ $(document).ready(function() {
         $.ajax({
             url: "https://indonesia-covid-19.mathdro.id/api/kasus",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var nomor = 1;
                 var data = data["data"];
                 var html = "";
-                $.each(data, function(index, val) {
+                $.each(data, function (index, val) {
                     html += "<tr>";
                     html += "<td>" + nomor++;
                     +"</td>";
@@ -102,7 +102,7 @@ $(document).ready(function() {
                 });
                 $("#all-pasien-data").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -111,10 +111,10 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/indonesia/provinsi/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var nomor = 1;
                 var html = "";
-                $.each(data, function(index, val) {
+                $.each(data, function (index, val) {
                     html += "<tr>";
                     html += "<td>" + nomor++;
                     +"</td>";
@@ -136,7 +136,7 @@ $(document).ready(function() {
                 });
                 $("#provinsi-data").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -145,11 +145,11 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/indonesia/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var html = "";
                 html +=
                     data[0]["positif"] +
-                    " POSITIF, " +
+                    " POSITIF,<BR>" +
                     data[0]["sembuh"] +
                     " SEMBUH,<BR>" +
                     data[0]["meninggal"] +
@@ -160,7 +160,7 @@ $(document).ready(function() {
                 $("#jum-meninggal").html(data[0]["meninggal"]);
                 $("#val-indonesia").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -169,11 +169,11 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/positif/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 $("#name-positif").html(data["name"]);
                 $("#val-positif").html(data["value"]);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -182,11 +182,11 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/sembuh/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 $("#name-sembuh").html(data["name"]);
                 $("#val-sembuh").html(data["value"]);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -195,11 +195,11 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/meninggal/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 $("#name-meninggal").html(data["name"]);
                 $("#val-meninggal").html(data["value"]);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -208,10 +208,10 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var html = "";
                 html += "<option value=''>-- Pilih Negara --</option>";
-                $.each(data, function(index, val) {
+                $.each(data, function (index, val) {
                     html +=
                         "<option value='" +
                         index +
@@ -221,7 +221,7 @@ $(document).ready(function() {
                 });
                 $("#select-all-negara").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
@@ -230,10 +230,10 @@ $(document).ready(function() {
         $.ajax({
             url: "https://api.kawalcorona.com/indonesia/provinsi/",
             type: "GET",
-            success: function(data) {
+            success: function (data) {
                 var html = "";
                 html += "<option value=''>-- Pilih Provinsi --</option>";
-                $.each(data, function(index, val) {
+                $.each(data, function (index, val) {
                     html +=
                         "<option value='" +
                         index +
@@ -243,19 +243,19 @@ $(document).ready(function() {
                 });
                 $("#select-all-provinsi").html(html);
             },
-            error: function() {}
+            error: function () {},
         });
     }
 
     //? Membuat struktur diagram lingkaran
     //? menampilkan digram sesuai negara yang di pilih
-    $("#select-all-negara").change(function() {
+    $("#select-all-negara").change(function () {
         var val = $("#select-all-negara option:selected").val();
         if (val != "") {
             $.ajax({
                 url: "https://api.kawalcorona.com/",
                 type: "GET",
-                success: function(data) {
+                success: function (data) {
                     if (
                         data[val]["attributes"]["Country_Region"] == "Indonesia"
                     ) {
@@ -276,7 +276,7 @@ $(document).ready(function() {
                         );
                     }
                 },
-                error: function() {}
+                error: function () {},
             });
         } else {
             $("#prov-indo").removeClass("tampil");
@@ -285,13 +285,13 @@ $(document).ready(function() {
     });
 
     //? menampilkan digram sesuai provinsi yang di pilih
-    $("#select-all-provinsi").change(function() {
+    $("#select-all-provinsi").change(function () {
         var val = $("#select-all-provinsi option:selected").val();
         if (val != "") {
             $.ajax({
                 url: "https://api.kawalcorona.com/indonesia/provinsi/",
                 type: "GET",
-                success: function(data) {
+                success: function (data) {
                     drawChart(
                         data[val]["attributes"]["Kasus_Posi"],
                         data[val]["attributes"]["Kasus_Semb"],
@@ -299,13 +299,13 @@ $(document).ready(function() {
                         data[val]["attributes"]["Provinsi"]
                     );
                 },
-                error: function() {}
+                error: function () {},
             });
         } else {
             $.ajax({
                 url: "https://api.kawalcorona.com/indonesia/",
                 type: "GET",
-                success: function(data) {
+                success: function (data) {
                     drawChart(
                         data[0]["positif"],
                         data[0]["sembuh"],
@@ -313,7 +313,7 @@ $(document).ready(function() {
                         data[0]["name"]
                     );
                 },
-                error: function() {}
+                error: function () {},
             });
         }
     });
@@ -328,36 +328,36 @@ $(document).ready(function() {
                     {
                         data: [positif, sembuh, meninggal],
                         backgroundColor: ["#ffa426", "#63ed7a", "#fc544b"],
-                        label: "Dataset 1"
-                    }
+                        label: "Dataset 1",
+                    },
                 ],
                 labels: [
                     rubah(positif) + " Orang Positif",
                     rubah(sembuh) + " Orang Sembuh",
-                    rubah(meninggal) + " Orang Meninggal"
-                ]
+                    rubah(meninggal) + " Orang Meninggal",
+                ],
             },
             options: {
                 responsive: true,
                 title: {
                     display: true,
-                    text: "Data Kasus Coronavirus " + wilayah
+                    text: "Data Kasus Coronavirus " + wilayah,
                 },
                 legend: {
-                    position: "bottom"
-                }
-            }
+                    position: "bottom",
+                },
+            },
         });
         //! myChart.reset();
         //! myChart.destroy();
         myChart.update({
             duration: 1000,
-            easing: "easeOutBounce"
+            easing: "easeOutBounce",
         });
         myChart.render({
             duration: 1000,
             lazy: true,
-            easing: "easeOutBounce"
+            easing: "easeOutBounce",
         });
     }
 
@@ -374,7 +374,7 @@ $(document).ready(function() {
             "Wednesday",
             "Thursday",
             "Friday",
-            "Saturday"
+            "Saturday",
         ];
         var day = days[date.getDay()];
         var d = date.getDate();
@@ -390,7 +390,7 @@ $(document).ready(function() {
             "September",
             "October",
             "November",
-            "December"
+            "December",
         ];
         var b = bulan[date.getMonth()];
         var y = date.getFullYear();
@@ -422,17 +422,9 @@ $(document).ready(function() {
 
     //? function rubah untuk membuat angka satuan ribuan
     function rubah(angka) {
-        var reverse = angka
-                .toString()
-                .split("")
-                .reverse()
-                .join(""),
+        var reverse = angka.toString().split("").reverse().join(""),
             ribuan = reverse.match(/\d{1,3}/g);
-        ribuan = ribuan
-            .join(",")
-            .split("")
-            .reverse()
-            .join("");
+        ribuan = ribuan.join(",").split("").reverse().join("");
         return ribuan;
     }
 });
