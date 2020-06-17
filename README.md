@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Selamat datang di Covid 19! 👋</h1>
 
-## Available Scripts
+## Apa itu Covid 19?
 
-In the project directory, you can run:
+Web Covid 19 yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi Ariyadi </a>. **Covid 19 adalah Website untuk melihat data positif, sembuh, meninggal yang terinfeksi virus covid 19 melalui website dengan mudah.**
 
-### `yarn start`
+## Fitur apa saja yang tersedia di Covid 19?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Infected Global
+- Recovered Global
+- Deaths Global
+- Daily Infected & Deaths
+- Show Infected, Recovered, Deaths by Country
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Release Date
 
-### `yarn test`
+**Release date : 28 Apr 2020**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Covid 19 merupakan project open source yang dibuat oleh Adhi Ariyadi. Kalian dapat download/fork/clone. Cukup beri stars di project ini agar memberiku semangat. Terima kasih!
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Install
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. **Clone Repository**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/adhiariyadi/Covid19-ReactJS.git
+cd Covid19-ReactJS
+```
 
-### `yarn eject`
+2. **Instalasi website**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Jalankan website**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Author
 
-## Learn More
+- Facebook : <a href="https://web.facebook.com/profile.php?id=100007787444809"> Adhi Ariyadi</a>
+- LinkedIn : <a href="https://www.linkedin.com/in/adhi-ariyadi-62164a1a0/"> Adhi Ariyadi</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues and feature requests di persilahkan.
+Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
 
-### Code Splitting
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Copyright © 2020 Adhi Ariyadi.
+- **Covid 19 is open-sourced software licensed under the MIT license.**
