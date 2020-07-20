@@ -43,8 +43,8 @@ npm start
 
 ## Author
 
-- Facebook : <a href="https://web.facebook.com/profile.php?id=100007787444809"> Adhi Ariyadi</a>
-- LinkedIn : <a href="https://www.linkedin.com/in/adhi-ariyadi-62164a1a0/"> Adhi Ariyadi</a>
+- Facebook : <a href="https://web.facebook.com/adhiariyadi.me/"> Adhi Ariyadi</a>
+- LinkedIn : <a href="https://www.linkedin.com/in/adhiariyadi/"> Adhi Ariyadi</a>
 
 ## Contributing
 
