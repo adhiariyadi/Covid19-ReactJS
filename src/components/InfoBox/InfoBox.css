@@ -1,0 +1,45 @@
+.infoBox {
+  flex: 1;
+  cursor: pointer;
+}
+
+.infoBox:not(:last-child) {
+  margin-right: 15px;
+}
+
+.infoBox-selected.cases {
+  border-top: 15px solid rgba(0, 0, 255, 0.8);
+}
+
+.infoBox-selected.recovered {
+  border-top: 15px solid rgba(0, 255, 0, 0.8);
+}
+
+.infoBox-selected.deaths {
+  border-top: 15px solid rgba(255, 0, 0, 0.8);
+}
+
+.infoBox-cases {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox-cases.cases {
+  color: rgba(0, 0, 255, 0.8);
+}
+
+.infoBox-cases.recovered {
+  color: rgba(0, 255, 0, 0.8);
+}
+
+.infoBox-cases.deaths {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.infoBox-total {
+  color: #6c757d !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  margin-top: 15px !important;
+}
